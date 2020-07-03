@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/RN-hw-3-ImageFinder/static/css/main.5f361e03.chunk.css",
-    "main.js": "/RN-hw-3-ImageFinder/static/js/main.b8f4d225.chunk.js",
-    "main.js.map": "/RN-hw-3-ImageFinder/static/js/main.b8f4d225.chunk.js.map",
+    "main.css": "/RN-hw-3-ImageFinder/static/css/main.8e69a160.chunk.css",
+    "main.js": "/RN-hw-3-ImageFinder/static/js/main.803eda2f.chunk.js",
+    "main.js.map": "/RN-hw-3-ImageFinder/static/js/main.803eda2f.chunk.js.map",
     "runtime-main.js": "/RN-hw-3-ImageFinder/static/js/runtime-main.00ac2740.js",
     "runtime-main.js.map": "/RN-hw-3-ImageFinder/static/js/runtime-main.00ac2740.js.map",
-    "static/js/2.f8c8d618.chunk.js": "/RN-hw-3-ImageFinder/static/js/2.f8c8d618.chunk.js",
-    "static/js/2.f8c8d618.chunk.js.map": "/RN-hw-3-ImageFinder/static/js/2.f8c8d618.chunk.js.map",
+    "static/css/2.a123c8b4.chunk.css": "/RN-hw-3-ImageFinder/static/css/2.a123c8b4.chunk.css",
+    "static/js/2.1183803f.chunk.js": "/RN-hw-3-ImageFinder/static/js/2.1183803f.chunk.js",
+    "static/js/2.1183803f.chunk.js.map": "/RN-hw-3-ImageFinder/static/js/2.1183803f.chunk.js.map",
     "index.html": "/RN-hw-3-ImageFinder/index.html",
-    "precache-manifest.7f785296db02ea3bad5be944242dab11.js": "/RN-hw-3-ImageFinder/precache-manifest.7f785296db02ea3bad5be944242dab11.js",
+    "precache-manifest.b520f3ba93ee957e48557d8ae7a05388.js": "/RN-hw-3-ImageFinder/precache-manifest.b520f3ba93ee957e48557d8ae7a05388.js",
     "service-worker.js": "/RN-hw-3-ImageFinder/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/RN-hw-3-ImageFinder/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.f8c8d618.chunk.js.LICENSE.txt": "/RN-hw-3-ImageFinder/static/js/2.f8c8d618.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/RN-hw-3-ImageFinder/static/media/logo.5d5d9eef.svg"
+    "static/css/2.a123c8b4.chunk.css.map": "/RN-hw-3-ImageFinder/static/css/2.a123c8b4.chunk.css.map",
+    "static/css/main.8e69a160.chunk.css.map": "/RN-hw-3-ImageFinder/static/css/main.8e69a160.chunk.css.map",
+    "static/js/2.1183803f.chunk.js.LICENSE.txt": "/RN-hw-3-ImageFinder/static/js/2.1183803f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.00ac2740.js",
-    "static/js/2.f8c8d618.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.b8f4d225.chunk.js"
+    "static/css/2.a123c8b4.chunk.css",
+    "static/js/2.1183803f.chunk.js",
+    "static/css/main.8e69a160.chunk.css",
+    "static/js/main.803eda2f.chunk.js"
   ]
 }
