@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
+import Container from "./components/Container";
 import ImageGalleryList from "./components/ImageGallery";
 import Modal from "./components/Modal";
 import Button from "./components/Button";
@@ -18,13 +19,13 @@ class App extends Component {
     error: null,
     showModal: false,
     largeImageURL: "",
+    modalImage: "",
   };
 
-  componentDidUpdate(prevState, prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     if (prevState.searchQuery !== this.state.searchQuery) {
-      this.fetchImages();
+      this.fetchImg();
     }
-    console.log("componentDidUpdate");
   }
 
   onChangeQuery = (query) => {
@@ -33,10 +34,10 @@ class App extends Component {
       images: [],
       currentPage: 1,
     });
-    console.log("onChangeQuery");
+    // console.log("onChangeQuery");
   };
 
-  fetchImages = () => {
+  fetchImg = () => {
     const { currentPage, searchQuery } = this.state;
     const options = { searchQuery, currentPage };
 
@@ -52,6 +53,7 @@ class App extends Component {
           images: [...prevState.images, ...hits],
           currentPage: prevState.currentPage + 1,
         }));
+
         window.scrollTo({
           top: document.documentElement.scrollHeight,
           behavior: "smooth",
@@ -87,24 +89,26 @@ class App extends Component {
 
         <SearchBar onSubmit={this.onChangeQuery} />
 
-        {error &&
-          toast.warn(`Error is discipline through which we advance ${error}`)}
+        <Container>
+          {error &&
+            toast.warn(`Error is discipline through which we advance ${error}`)}
 
-        {images.length > 0 && (
-          <ImageGalleryList images={images} onImgClick={this.openModal} />
-        )}
+          {images.length > 0 && (
+            <ImageGalleryList images={images} onImgClick={this.openModal} />
+          )}
 
-        {showLoadMoreBtn && (
-          <Button nameBtn={"Load More"} onLoadMoreBtnClick={this.fetchImages} />
-        )}
+          {showLoadMoreBtn && (
+            <Button nameBtn={"Load More"} onLoadMoreBtnClick={this.fetchImg} />
+          )}
 
-        {isLoading && <Spinner />}
+          {isLoading && <Spinner />}
 
-        {showModal && (
-          <Modal onClose={this.closeModal}>
-            <img src={modalImage} alt="" />
-          </Modal>
-        )}
+          {showModal && (
+            <Modal onClose={this.closeModal}>
+              <img src={modalImage} alt="" />
+            </Modal>
+          )}
+        </Container>
       </>
     );
   }
