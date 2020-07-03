@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "../styles.css";
+import styles from "./ImageGalleryItem.module.css";
 
 const ImageGalleryItem = ({
   id,
@@ -10,12 +10,12 @@ const ImageGalleryItem = ({
   onImgClick,
 }) => {
   return (
-    <li key={id} className={styles.ImageGalleryItem}>
+    <li key={id} className={styles.imageGalleryItem}>
       <img
         src={previewImg}
         alt={tags}
         onClick={() => onImgClick(largeImageURL)}
-        className="ImageGalleryItem-image"
+        className={styles.imageGalleryItemImage}
       />
     </li>
   );

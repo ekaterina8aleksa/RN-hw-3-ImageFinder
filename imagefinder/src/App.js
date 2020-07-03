@@ -3,10 +3,11 @@ import SearchBar from "./components/SearchBar";
 import ImageGalleryList from "./components/ImageGallery";
 import Modal from "./components/Modal";
 import Button from "./components/Button";
-import Loader from "./components/Loader";
+import Spinner from "./components/Loader";
 import ApiImg from "./services/apiImg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./components/styles.css";
 
 class App extends Component {
   state = {
@@ -21,8 +22,9 @@ class App extends Component {
 
   componentDidUpdate(prevState, prevProps) {
     if (prevState.searchQuery !== this.state.searchQuery) {
-      this.fetchImg();
+      this.fetchImages();
     }
+    console.log("componentDidUpdate");
   }
 
   onChangeQuery = (query) => {
@@ -31,11 +33,16 @@ class App extends Component {
       images: [],
       currentPage: 1,
     });
+    console.log("onChangeQuery");
   };
 
   fetchImages = () => {
     const { currentPage, searchQuery } = this.state;
     const options = { searchQuery, currentPage };
+
+    if (!searchQuery) {
+      return;
+    }
 
     this.setState({ isLoading: true });
 
@@ -51,7 +58,9 @@ class App extends Component {
         });
       })
       .catch((error) => this.setState({ error }))
-      .finally(() => this.setState({ isLoading: false }));
+      .finally(() => {
+        this.setState({ isLoading: false });
+      });
   };
 
   openModal = (largeImageURL) => {
@@ -86,10 +95,10 @@ class App extends Component {
         )}
 
         {showLoadMoreBtn && (
-          <Button nameBtn={"Load More"} onClick={this.fetchImages} />
+          <Button nameBtn={"Load More"} onLoadMoreBtnClick={this.fetchImages} />
         )}
 
-        {isLoading && <Loader />}
+        {isLoading && <Spinner />}
 
         {showModal && (
           <Modal onClose={this.closeModal}>

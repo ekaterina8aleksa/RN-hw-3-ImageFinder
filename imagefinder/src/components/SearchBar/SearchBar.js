@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import styles from "../styles.css";
+import styles from "./SearchBar.module.css";
 
 class SearchBar extends Component {
   state = { query: "" };
 
   handleChange = (e) => {
     this.setState({ query: e.currentTarget.value });
+    console.log("handleCange");
   };
 
   handleSubmit = (e) => {
@@ -13,22 +14,23 @@ class SearchBar extends Component {
     const { query } = this.state;
     this.props.onSubmit(query);
     this.setState({ query: "" });
+    console.log("handleSubmit");
   };
 
   render() {
     const { query } = this.state;
     return (
-      <header className={styles.Searchbar}>
-        <form className={styles.SearchForm}>
-          <button type="submit" className={styles.SearchFormbutton}>
-            <span className="SearchFormbuttonlabel">Search</span>
+      <header className={styles.searchBar}>
+        <form className={styles.searchForm}>
+          <button type="submit" className={styles.searchFormButton}>
+            <span className={styles.searchFormButtonLabel}>Search</span>
           </button>
 
           <input
-            className={styles.SearchForminput}
+            className={styles.searchFormInput}
             type="text"
-            autocomplete="off"
-            autofocus
+            autoComplete="off"
+            autoFocus
             placeholder="Search images and photos"
             value={query}
             onChange={this.handleChange}

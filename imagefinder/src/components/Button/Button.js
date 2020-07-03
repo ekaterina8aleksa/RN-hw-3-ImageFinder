@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "../styles.css";
+import styles from "./Button.module.css";
 
-const Button = ({ nameBtn, onClick }) => (
-  <button type="button" className={styles.Button} onClick={onClick}>
-    {nameBtn}
+const Button = ({ nameBtn, onLoadMoreBtnClick }) => (
+  <button type="button" className={styles.button} onClick={onLoadMoreBtnClick}>
+    <span> {nameBtn}</span>
   </button>
 );
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onLoadMoreBtnClick: PropTypes.func.isRequired,
   nameBtn: PropTypes.string.isRequired,
 };
 
