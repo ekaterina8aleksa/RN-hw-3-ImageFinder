@@ -8,7 +8,6 @@ import Spinner from "./common/Loader";
 import ApiImg from "./services/apiImg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./components/styles.css";
 
 class App extends Component {
   state = {
