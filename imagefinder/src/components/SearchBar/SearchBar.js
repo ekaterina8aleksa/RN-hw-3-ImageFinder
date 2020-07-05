@@ -6,7 +6,6 @@ class SearchBar extends Component {
 
   handleChange = (e) => {
     this.setState({ query: e.currentTarget.value });
-    // console.log("handleCange");
   };
 
   handleSubmit = (e) => {
@@ -14,20 +13,19 @@ class SearchBar extends Component {
     const { query } = this.state;
     this.props.onSubmit(query);
     this.setState({ query: "" });
-    // console.log("handleSubmit");
   };
 
   render() {
     const { query } = this.state;
     return (
-      <header className={styles.searchBar}>
-        <form className={styles.searchForm} onSubmit={this.handleSubmit}>
-          <button type="submit" className={styles.searchFormButton}>
-            <span className={styles.searchFormButtonLabel}>Search</span>
+      <header className={styles.bar}>
+        <form className={styles.form} onSubmit={this.handleSubmit}>
+          <button type="submit" className={styles.searchButton}>
+            <span className={styles.searchButtonLabel}>Search</span>
           </button>
 
           <input
-            className={styles.searchFormInput}
+            className={styles.searchInput}
             type="text"
             autoComplete="off"
             autoFocus

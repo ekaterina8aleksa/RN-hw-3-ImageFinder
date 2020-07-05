@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import errorImage from "../../services/errorImage";
 import styles from "./ImageGalleryItem.module.css";
 
 const ImageGalleryItem = ({
@@ -22,10 +23,8 @@ const ImageGalleryItem = ({
 };
 
 ImageGalleryItem.defaultProps = {
-  previewImg:
-    "https://pypik.ru/uploads/posts/2018-09/1536907413_foto-net-no-ya-krasivaya-4.jpg",
-  largeImageURL:
-    "https://pypik.ru/uploads/posts/2018-09/1536907413_foto-net-no-ya-krasivaya-4.jpg",
+  previewImg: errorImage,
+  largeImageURL: errorImage,
   tags: "sorry =( no info",
 };
 
@@ -34,7 +33,6 @@ ImageGalleryItem.propTypes = {
   largeImageURL: PropTypes.string,
   tags: PropTypes.string,
   onImgClick: PropTypes.func.isRequired,
-  // id: PropTypes.string.isRequired,
 };
 
 export default ImageGalleryItem;

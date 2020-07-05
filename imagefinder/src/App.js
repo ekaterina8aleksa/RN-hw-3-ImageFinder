@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import SearchBar from "./components/SearchBar";
-import Container from "./components/Container";
+import Container from "./common/Container";
 import ImageGalleryList from "./components/ImageGallery";
-import Modal from "./components/Modal";
-import Button from "./components/Button";
-import Spinner from "./components/Loader";
+import Modal from "./common/Modal";
+import Button from "./common/Button";
+import Spinner from "./common/Loader";
 import ApiImg from "./services/apiImg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -26,7 +26,18 @@ class App extends Component {
     if (prevState.searchQuery !== this.state.searchQuery) {
       this.fetchImg();
     }
+
+    if (prevState.images.length > 12) {
+      this.scrollTo();
+    }
   }
+
+  scrollTo = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
 
   onChangeQuery = (query) => {
     this.setState({
@@ -34,14 +45,14 @@ class App extends Component {
       images: [],
       currentPage: 1,
     });
-    // console.log("onChangeQuery");
   };
 
   fetchImg = () => {
     const { currentPage, searchQuery } = this.state;
     const options = { searchQuery, currentPage };
 
-    if (!searchQuery) {
+    if (!searchQuery || searchQuery === " ") {
+      toast.warn(`Oooopsy, something went wrong  =( `);
       return;
     }
 
@@ -49,15 +60,14 @@ class App extends Component {
 
     ApiImg.fetchImg(options)
       .then((hits) => {
-        this.setState((prevState) => ({
-          images: [...prevState.images, ...hits],
-          currentPage: prevState.currentPage + 1,
-        }));
-
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: "smooth",
-        });
+        if (hits.length === 0) {
+          toast.warn(`No more images to show =(`);
+        } else {
+          this.setState((prevState) => ({
+            images: [...prevState.images, ...hits],
+            currentPage: prevState.currentPage + 1,
+          }));
+        }
       })
       .catch((error) => this.setState({ error }))
       .finally(() => {
