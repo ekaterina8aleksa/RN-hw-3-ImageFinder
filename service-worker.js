@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/RN-hw-3-ImageFinder/precache-manifest.57d844f3aa6f3e40a2989714b4703cb6.js"
+  "/RN-hw-3-ImageFinder/precache-manifest.72239ddf0e3f6ffc5ec9f3ef715c05aa.js"
 );
 
 self.addEventListener('message', (event) => {
