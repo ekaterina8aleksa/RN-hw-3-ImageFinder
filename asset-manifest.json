@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/RN-hw-3-ImageFinder/static/css/main.cb50e509.chunk.css",
-    "main.js": "/RN-hw-3-ImageFinder/static/js/main.c5c63b34.chunk.js",
-    "main.js.map": "/RN-hw-3-ImageFinder/static/js/main.c5c63b34.chunk.js.map",
+    "main.css": "/RN-hw-3-ImageFinder/static/css/main.d2f83d90.chunk.css",
+    "main.js": "/RN-hw-3-ImageFinder/static/js/main.5364f0db.chunk.js",
+    "main.js.map": "/RN-hw-3-ImageFinder/static/js/main.5364f0db.chunk.js.map",
     "runtime-main.js": "/RN-hw-3-ImageFinder/static/js/runtime-main.00ac2740.js",
     "runtime-main.js.map": "/RN-hw-3-ImageFinder/static/js/runtime-main.00ac2740.js.map",
     "static/css/2.a123c8b4.chunk.css": "/RN-hw-3-ImageFinder/static/css/2.a123c8b4.chunk.css",
-    "static/js/2.aee043db.chunk.js": "/RN-hw-3-ImageFinder/static/js/2.aee043db.chunk.js",
-    "static/js/2.aee043db.chunk.js.map": "/RN-hw-3-ImageFinder/static/js/2.aee043db.chunk.js.map",
+    "static/js/2.be9fea76.chunk.js": "/RN-hw-3-ImageFinder/static/js/2.be9fea76.chunk.js",
+    "static/js/2.be9fea76.chunk.js.map": "/RN-hw-3-ImageFinder/static/js/2.be9fea76.chunk.js.map",
     "index.html": "/RN-hw-3-ImageFinder/index.html",
-    "precache-manifest.f59e631eac17d913d658bbc6a74dbc1b.js": "/RN-hw-3-ImageFinder/precache-manifest.f59e631eac17d913d658bbc6a74dbc1b.js",
+    "precache-manifest.72427d1d3e5fbf6cab4393bbf11d434f.js": "/RN-hw-3-ImageFinder/precache-manifest.72427d1d3e5fbf6cab4393bbf11d434f.js",
     "service-worker.js": "/RN-hw-3-ImageFinder/service-worker.js",
     "static/css/2.a123c8b4.chunk.css.map": "/RN-hw-3-ImageFinder/static/css/2.a123c8b4.chunk.css.map",
-    "static/css/main.cb50e509.chunk.css.map": "/RN-hw-3-ImageFinder/static/css/main.cb50e509.chunk.css.map",
-    "static/js/2.aee043db.chunk.js.LICENSE.txt": "/RN-hw-3-ImageFinder/static/js/2.aee043db.chunk.js.LICENSE.txt"
+    "static/css/main.d2f83d90.chunk.css.map": "/RN-hw-3-ImageFinder/static/css/main.d2f83d90.chunk.css.map",
+    "static/js/2.be9fea76.chunk.js.LICENSE.txt": "/RN-hw-3-ImageFinder/static/js/2.be9fea76.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.00ac2740.js",
     "static/css/2.a123c8b4.chunk.css",
-    "static/js/2.aee043db.chunk.js",
-    "static/css/main.cb50e509.chunk.css",
-    "static/js/main.c5c63b34.chunk.js"
+    "static/js/2.be9fea76.chunk.js",
+    "static/css/main.d2f83d90.chunk.css",
+    "static/js/main.5364f0db.chunk.js"
   ]
 }
