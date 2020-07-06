@@ -26,7 +26,7 @@ class App extends Component {
       this.fetchImg();
     }
 
-    if (prevState.images.length > 12) {
+    if (prevState.images.length > 4) {
       this.scrollTo();
     }
   }
